@@ -1,0 +1,5 @@
+C:\Users\Oleksandr\Desktop\Capstone2\Capstone2\bin\Capstone2.dll
+C:\Users\Oleksandr\Desktop\Capstone2\Capstone2\bin\Capstone2.pdb
+C:\Users\Oleksandr\Desktop\Capstone2\Capstone2\obj\Debug\Capstone2.csprojResolveAssemblyReference.cache
+C:\Users\Oleksandr\Desktop\Capstone2\Capstone2\obj\Debug\Capstone2.dll
+C:\Users\Oleksandr\Desktop\Capstone2\Capstone2\obj\Debug\Capstone2.pdb

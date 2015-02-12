@@ -1,0 +1,10 @@
+W:\CIS4396-S06\Capstone2\Capstone2\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+W:\CIS4396-S06\Capstone2\Capstone2\Utilities\bin\Debug\Utilities.dll
+W:\CIS4396-S06\Capstone2\Capstone2\Utilities\bin\Debug\Utilities.pdb
+W:\CIS4396-S06\Capstone2\Capstone2\Utilities\obj\Debug\Utilities.dll
+W:\CIS4396-S06\Capstone2\Capstone2\Utilities\obj\Debug\Utilities.pdb
+W:\CIS4396-S06\tud15864\Capstone2\Capstone2\Utilities\bin\Debug\Utilities.dll
+W:\CIS4396-S06\tud15864\Capstone2\Capstone2\Utilities\bin\Debug\Utilities.pdb
+W:\CIS4396-S06\tud15864\Capstone2\Capstone2\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+W:\CIS4396-S06\tud15864\Capstone2\Capstone2\Utilities\obj\Debug\Utilities.dll
+W:\CIS4396-S06\tud15864\Capstone2\Capstone2\Utilities\obj\Debug\Utilities.pdb
