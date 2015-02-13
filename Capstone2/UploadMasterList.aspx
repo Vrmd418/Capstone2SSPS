@@ -4,12 +4,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <div class="container-fluid">
-    <div class="row" style ="margin-top: 7%; position: relative ">
+    <div class="row">
+        <div class="col-lg-3 cl-md-6"></div>
+        <div class="col-lg-6 cl-md-6">
+                    <h1 class="page-header">Upload Cognos Report</h1>
+        </div>           
+                
+        
+    </div>
+        
+        <div class="row" style ="position: relative ">
         
         <div class="col-lg-3 cl-md-6"></div>
         <div class="col-lg-6 cl-md-6">
-            <div class="panel panel-default" style="width:100%">
-                <div class="panel-heading">
+            <div style="width:100%" class="panel panel-default" >
+                <div style="font-weight: bold" class="panel-heading">
                     Upload Cognos Report
                 </div>
                 <div class="panel-body" style="color: black">
@@ -26,7 +35,7 @@
                     style="visibility:hidden; width: 1px;" 
                     id='${multipartFilePath}' name='${multipartFilePath}'  
                     onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> <!-- Chrome security returns 'C:\fakepath\'  -->
-                    <input class="btn btn-default" type="button" value="Chose File" onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
+                    <input style="border-color:#9E1B34 " class="btn btn-default" type="button" value="Chose File" onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
                     &nbsp;
                     <span  class="badge badge-important" ></span>
                     </span>

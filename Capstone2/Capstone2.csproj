@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPage.aspx" />
+    <Content Include="CommitteView.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="css\bootstrap-theme.css" />
@@ -75,6 +77,7 @@
     <Content Include="js\npm.js" />
     <Content Include="ssp.jpg" />
     <Content Include="StudentHome.aspx" />
+    <Content Include="ViewHistorical.aspx" />
     <Content Include="Web.config" />
     <Content Include="LogIn.aspx" />
     <Content Include="Contact.aspx" />
@@ -94,8 +97,26 @@
     <Compile Include="1.Master.designer.cs">
       <DependentUpon>1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Application.cs" />
     <Compile Include="ApplicationFunctions.cs" />
+    <Compile Include="CommitteView.aspx.cs">
+      <DependentUpon>CommitteView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommitteView.aspx.designer.cs">
+      <DependentUpon>CommitteView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -177,6 +198,12 @@
       <DependentUpon>SendEmail.aspx</DependentUpon>
     </Compile>
     <Compile Include="utils\Connection.cs" />
+    <Compile Include="ViewHistorical.aspx.cs">
+      <DependentUpon>ViewHistorical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHistorical.aspx.designer.cs">
+      <DependentUpon>ViewHistorical.aspx</DependentUpon>
+    </Compile>
     <Compile Include="workingpage.aspx.cs">
       <DependentUpon>workingpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -194,6 +221,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Student.Master" />
     <Content Include="1.Master" />
+    <Content Include="Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

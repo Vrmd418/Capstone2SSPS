@@ -4,12 +4,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 <div class="container-fluid">
-        <div class="row" style ="margin-top: 5%; position: relative">
+        
+    <div class="row">
+        <div class="col-lg-3 cl-md-6"></div>
+        <div class="col-lg-6 cl-md-6">
+                    <h1 class="page-header">Send Email</h1>
+        </div>           
+                
+        
+    </div>
+    <div class="row" style ="position: relative">
         <div class="col-lg-3 cl-md-6"></div>
         <div class="col-lg-6 cl-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <asp:Label ID="Label1" runat="server" Text="Send Email to Students"></asp:Label>
+                    <asp:Label Style="font-weight: bold" ID="Label1" runat="server" Text="Send Email to Students"></asp:Label>
                 </div>
                 <div class="panel-body" style="color:black">
                     
@@ -31,7 +40,7 @@
                     style="visibility:hidden; width: 1px;" 
                     id='${multipartFilePath}' name='${multipartFilePath}'  
                     onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> <!-- Chrome security returns 'C:\fakepath\'  -->
-                    <input class="btn btn-default" type="button" value="Upload Email" onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
+                    <input style="border-color: #9E1B34 " class="btn btn-default" type="button" value="Upload Email" onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
                     &nbsp;
                     <span  class="badge badge-important" ></span>
                     </span>

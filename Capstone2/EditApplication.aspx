@@ -16,7 +16,7 @@
     
         <div class="col-lg-6 col-md-6">
             <div class="panel panel-default" style="min-width: 275px; width: 100%; margin-left: auto; margin-right: auto">
-                <div class="panel-heading">
+                <div style="font-weight: bold" class="panel-heading">
                     Edit application questions below
                 </div>
                
