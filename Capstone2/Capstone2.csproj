@@ -38,7 +38,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.0.3\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.5\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -99,12 +114,14 @@
     </Compile>
     <Compile Include="Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
     <Compile Include="AdminPage.aspx.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
@@ -113,6 +130,7 @@
     <Compile Include="ApplicationFunctions.cs" />
     <Compile Include="CommitteView.aspx.cs">
       <DependentUpon>CommitteView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CommitteView.aspx.designer.cs">
       <DependentUpon>CommitteView.aspx</DependentUpon>
@@ -168,6 +186,7 @@
     <Compile Include="NewAdminOrCommite.aspx.designer.cs">
       <DependentUpon>NewAdminOrCommite.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SSPSStudent.cs" />
     <Compile Include="StoredProcedures.cs" />
     <Compile Include="Student.Master.cs">
       <DependentUpon>Student.Master</DependentUpon>
@@ -198,8 +217,10 @@
       <DependentUpon>SendEmail.aspx</DependentUpon>
     </Compile>
     <Compile Include="utils\Connection.cs" />
+    <Compile Include="utils\UtilityFunctions.cs" />
     <Compile Include="ViewHistorical.aspx.cs">
       <DependentUpon>ViewHistorical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewHistorical.aspx.designer.cs">
       <DependentUpon>ViewHistorical.aspx</DependentUpon>
@@ -222,12 +243,16 @@
     <Content Include="Student.Master" />
     <Content Include="1.Master" />
     <Content Include="Admin.Master" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Excel\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

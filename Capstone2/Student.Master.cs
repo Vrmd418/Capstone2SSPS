@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Capstone2
 {
-    public partial class Student : System.Web.UI.MasterPage
+    public partial class ScholarStudent : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
