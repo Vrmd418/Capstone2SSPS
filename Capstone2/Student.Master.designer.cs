@@ -10,7 +10,7 @@
 namespace Capstone2 {
     
     
-    public partial class Student {
+    public partial class ScholarStudent {
         
         /// <summary>
         /// Head1 control.
