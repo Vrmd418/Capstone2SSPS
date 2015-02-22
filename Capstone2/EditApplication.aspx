@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student.Master" AutoEventWireup="true" CodeBehind="EditApplication.aspx.cs" Inherits="Capstone2.WebForm3" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WithNav.Master" AutoEventWireup="true" CodeBehind="EditApplication.aspx.cs" Inherits="Capstone2.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <div class="container-fluid">
-        <div class="row" style ="margin-top: 2%; position: relative ">
+        <div class="row" style ="">
         <div class="col-lg-3 cl-md-6"></div>
         <div class="col-lg-6 cl-md-6">
                     <h1 class="page-header">Edit Application</h1>
@@ -61,7 +61,6 @@
                     </div>
                 </div>
             </div>
-       <%-- </div>
-        </div>--%>
+
 
 </asp:Content>

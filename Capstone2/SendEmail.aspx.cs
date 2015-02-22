@@ -11,7 +11,27 @@ namespace Capstone2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Login"] == null)
+            {
+                Server.Transfer("LogIn.aspx", true);
+            }
 
+            else
+            {
+                UserObject obj = (UserObject)Session["Login"];
+
+                ((Label)Master.FindControl("UserLabel")).Text = obj.TUID.ToString();
+
+                if (obj.Category.ToString() == "Admin")
+                {
+
+                    ((Panel)Master.FindControl("AdminPanel")).Visible = true;
+                }
+                else
+                {
+                    ((Panel)Master.FindControl("CommitteePanel")).Visible = true;
+                }
+            }
         }
     }
 }

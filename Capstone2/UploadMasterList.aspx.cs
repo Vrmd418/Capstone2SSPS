@@ -12,9 +12,18 @@ namespace Capstone2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Login"] == null)
+            {
+                Server.Transfer("LogIn.aspx", true);
+            }
+            else
+            {
+                UserObject obj = (UserObject)Session["Login"];
 
+                ((Label)Master.FindControl("UserLabel")).Text = obj.TUID.ToString();
+                ((Panel)Master.FindControl("AdminPanel")).Visible = true;
+            }
         }
-
         protected void UploadButton_Click(object sender, EventArgs e)
         {
             DataSet myDS = UtilityFunctions.getDataSetFromExcel(fuMasterListUpload, Server);

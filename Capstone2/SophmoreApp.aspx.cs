@@ -10,7 +10,23 @@ namespace Capstone2
 {
     public partial class WebForm5 : System.Web.UI.Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
+            if (Session["Login"] == null)
+            {
+                Server.Transfer("LogIn.aspx", true);
+            }
+            else
+            {
+                UserObject obj = (UserObject)Session["Login"];
+
+                ((Label)Master.FindControl("UserLabel")).Text = obj.TUID.ToString();
+
+                ((Panel)Master.FindControl("SophmorePanel")).Visible = true;
+            }
+
+        }
         protected void Page_Init(object sender, EventArgs e)
         {
             StoredProcedures storedProcs = new StoredProcedures();
