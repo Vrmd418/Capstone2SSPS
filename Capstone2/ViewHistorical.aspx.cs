@@ -12,51 +12,70 @@ namespace Capstone2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Login"] == null)
+            {
+                Server.Transfer("LogIn.aspx", true);
+            }
+            else
+            {
+                UserObject obj = (UserObject)Session["Login"];
 
-            DataTable tbl = new DataTable();
+                ((Label)Master.FindControl("UserLabel")).Text = obj.TUID.ToString();
 
-            tbl.Columns.Add("firstName", typeof(String));
-            tbl.Columns.Add("lastName", typeof(String));
-            tbl.Columns.Add("academicYear", typeof(String));
-            tbl.Columns.Add("major", typeof(String));
-            tbl.Columns.Add("rank", typeof(String));
+                if (obj.Category.ToString() == "Admin")
+                {
 
-            DataRow newRow = tbl.NewRow();
+                    ((Panel)Master.FindControl("AdminPanel")).Visible = true;
+                }
+                else
+                {
+                    ((Panel)Master.FindControl("CommitteePanel")).Visible = true;
+                }
 
-            newRow["firstName"] = "Brent";
-            newRow["lastName"] = "Baskin";
-            newRow["academicYear"] = "2014-2015";
-            newRow["major"] = "CIS";
-            newRow["rank"] = 5;
-            
-            tbl.Rows.Add(newRow);
+                DataTable tbl = new DataTable();
 
-            DataRow newRow1 = tbl.NewRow();
+                tbl.Columns.Add("firstName", typeof(String));
+                tbl.Columns.Add("lastName", typeof(String));
+                tbl.Columns.Add("academicYear", typeof(String));
+                tbl.Columns.Add("major", typeof(String));
+                tbl.Columns.Add("rank", typeof(String));
 
-            newRow1["firstName"] = "Vince";
-            newRow1["lastName"] = "Dixon";
-            newRow1["academicYear"] = "2014-2015";
-            newRow1["major"] = "CIS";
-            newRow1["rank"] = 5;
+                DataRow newRow = tbl.NewRow();
 
-            tbl.Rows.Add(newRow1);
+                newRow["firstName"] = "Brent";
+                newRow["lastName"] = "Baskin";
+                newRow["academicYear"] = "2014-2015";
+                newRow["major"] = "CIS";
+                newRow["rank"] = 5;
 
-            DataRow newRow2 = tbl.NewRow();
+                tbl.Rows.Add(newRow);
 
-            newRow2["firstName"] = "Josh";
-            newRow2["lastName"] = "Roach";
-            newRow2["academicYear"] = "2014-2015";
-            newRow2["major"] = "CIS";
-            newRow2["rank"] = 5;
+                DataRow newRow1 = tbl.NewRow();
 
-            tbl.Rows.Add(newRow2);
+                newRow1["firstName"] = "Vince";
+                newRow1["lastName"] = "Dixon";
+                newRow1["academicYear"] = "2014-2015";
+                newRow1["major"] = "CIS";
+                newRow1["rank"] = 5;
 
-            ViewHistoricalGridView.DataSource = tbl;
-            ViewHistoricalGridView.DataBind();
-        
-        
-        
-        
+                tbl.Rows.Add(newRow1);
+
+                DataRow newRow2 = tbl.NewRow();
+
+                newRow2["firstName"] = "Josh";
+                newRow2["lastName"] = "Roach";
+                newRow2["academicYear"] = "2014-2015";
+                newRow2["major"] = "CIS";
+                newRow2["rank"] = 5;
+
+                tbl.Rows.Add(newRow2);
+
+                ViewHistoricalGridView.DataSource = tbl;
+                ViewHistoricalGridView.DataBind();
+
+
+            }
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="CommitteView.aspx.cs" Inherits="Capstone2.WebForm11" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WithNav.Master" AutoEventWireup="true" CodeBehind="CommitteView.aspx.cs" Inherits="Capstone2.WebForm11" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -22,7 +22,7 @@
                     Committe View
                 </div>
                 <div class="panel-body" style="padding-left: 20px; color: black">
-                    
+                    <div class="col-lg-8 col-md-12" >
                     <div class="col-lg-12 col-md-12">
                     <asp:Label ID="AcademicYearLabel" runat="server" Text="Academic Year:"></asp:Label>
                     <asp:DropDownList class="form-control" ID="AcademicYearDropDownList" runat="server" style="width:100%; margin-top:10px; margin-bottom: 20px; position: relative">
@@ -37,25 +37,26 @@
                     <asp:ListItem Value="Select"></asp:ListItem>
                        </asp:DropDownList>
                     </div>
-
+                         </div>
                                      
-                    <div class="col-lg-4 col-md-6" style="width: 66%">
-                     </div>
-                    <div class="col-lg-4 col-md-6">
-                    <asp:Button class="btn btn-default" ID="SearchButton" runat="server" Text="Search" BorderColor="#9E1B34" style="width: 100%; margin-top: 10px; margin-bottom: 10px" BackColor="#9E1B34" ForeColor="White" />                     
+                    <div class="col-lg-4 col-md-12">
+                     <%--</div>--%>
+                    <div class="col-lg-12 col-md-12">
+                    <asp:Button class="btn btn-default" ID="SearchButton" runat="server" Text="Search" BorderColor="#9E1B34" style=" width:100%; margin-top: 30px; margin-bottom: 10px" BackColor="#9E1B34" ForeColor="White" />                     
+                   </div>
+                   <%-- <div class="col-lg-12 col-md-6" style="width: 66%">--%>
+                    
+                    <div class="col-lg-12 col-md-12">
+                    <asp:Button class="btn btn-default" ID="SelectButton" runat="server" BorderColor="#9E1B34" Text="Download Selected" style="width:100%; margin-bottom: 10px" BackColor="#9E1B34" ForeColor="White" />                     
                     </div>
-                    <div class="col-lg-4 col-md-6" style="width: 66%">
-                     </div>
-                    <div class="col-lg-4 col-md-6">
-                    <asp:Button class="btn btn-default" ID="SelectButton" runat="server" BorderColor="#9E1B34" Text="Download Selected" style="width: 100%; margin-bottom: 10px" BackColor="#9E1B34" ForeColor="White" />                     
-                    </div>
-                    <div class="col-lg-4 col-md-6" style="width: 66%">
-                     </div>
-                    <div class="col-lg-4 col-md-6">
-                    <asp:Button class="btn btn-default" ID="ExportDataButton" runat="server" BorderColor="#9E1B34" Text="Export Data" style="width: 100%; margin-bottom: 10px" BackColor="#9E1B34" ForeColor="White" />                     
-                    </div>
-                
+                   <%-- <div class="col-lg-4 col-md-6" style="width: 66%">
+                     </div>--%>
+                    <div class="col-lg-12 col-md-12">
+                    <asp:Button class="btn btn-default" ID="ExportDataButton" runat="server" BorderColor="#9E1B34" Text="Export Data" style="width:100%; margin-bottom: 10px" BackColor="#9E1B34" ForeColor="White" />                     
+                    </div> 
                 </div>
+                
+                <%--</div>--%>
                     
                    
                     <asp:GridView ID="ViewHistoricalGridView" runat="server" Style="margin-top:5px; margin-bottom: 2%; margin-left: auto; margin-right: auto; position: relative; width: 94%" AutoGenerateColumns="False" Width="800px">
@@ -116,6 +117,8 @@
                         <HeaderStyle BackColor="#9e1b34" Font-Bold="True" ForeColor="White" />
                     </asp:GridView>
                     </div>
+
+            </div>
                 <br />
             </div>
         </div>

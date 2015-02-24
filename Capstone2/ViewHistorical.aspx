@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="ViewHistorical.aspx.cs" Inherits="Capstone2.WebForm9" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WithNav.Master" AutoEventWireup="true" CodeBehind="ViewHistorical.aspx.cs" Inherits="Capstone2.WebForm9" %>
 <%--Main--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -104,5 +104,6 @@
             </div>
         </div>
     </div>
+
      
 </asp:Content>
