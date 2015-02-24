@@ -61,6 +61,7 @@
                         <SortedDescendingCellStyle BackColor="#FFFDF8" />
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
+        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
     </form>
 </body>
 </html>

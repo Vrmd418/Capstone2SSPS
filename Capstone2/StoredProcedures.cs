@@ -336,6 +336,90 @@ namespace Capstone2
 
             myConnection.DoUpdateUsingCmdObj(objCommand);
         }
+
+        public Boolean GetUser(String userId)
+        {
+            SqlCommand objcomm = new SqlCommand();
+
+            objcomm.CommandType = CommandType.StoredProcedure;
+
+            objcomm.CommandText = "GetUser";
+            objcomm.Parameters.Add("@userName", userId);
+
+            SqlParameter outputParameter = new SqlParameter("@result", DbType.Int32);
+            outputParameter.Direction = ParameterDirection.ReturnValue;
+
+            objcomm.Parameters.Add(outputParameter);
+
+            myConnection.DoUpdateUsingCmdObj(objcomm);
+
+            int result = int.Parse(objcomm.Parameters["@result"].Value.ToString());
+
+            if (result == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+        public String GetCategory(String username)
+        {
+            DBConnect db = new DBConnect();
+            SqlCommand objcomm = new SqlCommand();
+            objcomm.CommandType = CommandType.StoredProcedure;
+            objcomm.CommandText = "GetCategory";
+
+            objcomm.Parameters.Add("@userName", username);
+
+            DataSet ds = db.GetDataSetUsingCmdObj(objcomm);
+
+            String category = ds.Tables[0].Rows[0][0].ToString();
+
+            return category;
+
+        }
+
+        public void CreateTerm(String yearCode, String appdeadline, String docdeadline, String rankdeadline)
+        {
+            SqlCommand objcomm = new SqlCommand();
+
+            objcomm.CommandType = CommandType.StoredProcedure;
+
+            objcomm.CommandText = "CreateTerm";
+            objcomm.Parameters.Add("@yearCode", yearCode);
+            objcomm.Parameters.Add("@applicationDeadline", appdeadline);
+            objcomm.Parameters.Add("@documentDeadline", docdeadline);
+            objcomm.Parameters.Add("@rankDeadline", rankdeadline);
+	
+            SqlParameter outputParameter = new SqlParameter("@result", DbType.Int32);
+            outputParameter.Direction = ParameterDirection.ReturnValue;
+
+            objcomm.Parameters.Add(outputParameter);
+
+            myConnection.DoUpdateUsingCmdObj(objcomm);
+
+            
+        }
+
+        public String GetYearCode()
+        {
+            DBConnect db = new DBConnect();
+            SqlCommand objcomm = new SqlCommand();
+            objcomm.CommandType = CommandType.StoredProcedure;
+            objcomm.CommandText = "GetAcademicYear";
+
+            DataSet ds = db.GetDataSetUsingCmdObj(objcomm);
+
+            String category = ds.Tables[0].Rows[0][0].ToString();
+
+            return category;
+
+        }
+    
     }
+
        
 }

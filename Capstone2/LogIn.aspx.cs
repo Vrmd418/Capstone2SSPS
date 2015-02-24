@@ -20,7 +20,9 @@ namespace Capstone2
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Boolean val = GetUser(UserIdTextBox.Text);
+            StoredProcedures sp = new StoredProcedures();
+            
+            Boolean val = sp.GetUser(UserIdTextBox.Text);
 
             if (val == false)
             {
@@ -43,7 +45,7 @@ namespace Capstone2
                         MessageLabel.Visible = false;
 
                         UserObject obj = new UserObject();
-                        String category = GetCategory(UserIdTextBox.Text);
+                        String category = sp.GetCategory(UserIdTextBox.Text);
                         obj.Category = category;
                         obj.TUID = UserIdTextBox.Text;
                         Session["Login"] = obj;
@@ -123,52 +125,52 @@ namespace Capstone2
             string strDN = result.Path.Substring((nIndex + 1)).ToString().TrimEnd();
             return strDN;
         }
-        private Boolean GetUser(String userId)
-        {
-            DBConnect db2 = new DBConnect();
-            SqlCommand objcomm = new SqlCommand();
+        //private Boolean GetUser(String userId)
+        //{
+        //    DBConnect db2 = new DBConnect();
+        //    SqlCommand objcomm = new SqlCommand();
 
-            objcomm.CommandType = CommandType.StoredProcedure;
+        //    objcomm.CommandType = CommandType.StoredProcedure;
 
-            objcomm.CommandText = "GetUser";
-            objcomm.Parameters.Add("@userName", UserIdTextBox.Text);
+        //    objcomm.CommandText = "GetUser";
+        //    objcomm.Parameters.Add("@userName", UserIdTextBox.Text);
 
-            SqlParameter outputParameter = new SqlParameter("@result", DbType.Int32);
-            outputParameter.Direction = ParameterDirection.ReturnValue;
+        //    SqlParameter outputParameter = new SqlParameter("@result", DbType.Int32);
+        //    outputParameter.Direction = ParameterDirection.ReturnValue;
 
-            objcomm.Parameters.Add(outputParameter);
+        //    objcomm.Parameters.Add(outputParameter);
 
-            db2.DoUpdateUsingCmdObj(objcomm);
+        //    db2.DoUpdateUsingCmdObj(objcomm);
 
-            int result = int.Parse(objcomm.Parameters["@result"].Value.ToString());
+        //    int result = int.Parse(objcomm.Parameters["@result"].Value.ToString());
 
-            if (result == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+        //    if (result == 0)
+        //    {
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
 
-        }
+        //}
 
-        private String GetCategory(String username)
-        {
-            DBConnect db = new DBConnect();
-            SqlCommand objcomm = new SqlCommand();
-            objcomm.CommandType = CommandType.StoredProcedure;
-            objcomm.CommandText = "GetCategory";
+        //private String GetCategory(String username)
+        //{
+        //    DBConnect db = new DBConnect();
+        //    SqlCommand objcomm = new SqlCommand();
+        //    objcomm.CommandType = CommandType.StoredProcedure;
+        //    objcomm.CommandText = "GetCategory";
 
-            objcomm.Parameters.Add("@userName", UserIdTextBox.Text);
+        //    objcomm.Parameters.Add("@userName", UserIdTextBox.Text);
 
-            DataSet ds = db.GetDataSetUsingCmdObj(objcomm);
+        //    DataSet ds = db.GetDataSetUsingCmdObj(objcomm);
 
-            String category = ds.Tables[0].Rows[0][0].ToString();
+        //    String category = ds.Tables[0].Rows[0][0].ToString();
 
-            return category;
+        //    return category;
 
-        }
+        //}
         protected void ForgotPassword_Click(object sender, EventArgs e)
         {
             Response.Redirect("https://accounts.temple.edu/selfcare/login.jsp");
