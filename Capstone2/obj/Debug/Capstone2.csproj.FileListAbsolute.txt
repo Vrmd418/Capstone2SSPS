@@ -39,6 +39,6 @@ W:\CIS4396-S06\tue99351\GitHub\Capstone2SSPS\Capstone2\bin\itextsharp.dll
 W:\CIS4396-S06\tue99351\GitHub\Capstone2SSPS\Capstone2\bin\EPPlus.xml
 W:\CIS4396-S06\tue99351\GitHub\Capstone2SSPS\Capstone2\bin\Excel.pdb
 W:\CIS4396-S06\tue99351\GitHub\Capstone2SSPS\Capstone2\bin\itextsharp.xml
-W:\CIS4396-S06\tue99351\GitHub\Capstone2SSPS\Capstone2\obj\Debug\Capstone2.csprojResolveAssemblyReference.cache
 W:\CIS4396-S06\tue99351\GitHub\Capstone2SSPS\Capstone2\obj\Debug\Capstone2.dll
 W:\CIS4396-S06\tue99351\GitHub\Capstone2SSPS\Capstone2\obj\Debug\Capstone2.pdb
+W:\CIS4396-S06\tue99351\GitHub\Capstone2SSPS\Capstone2\obj\Debug\Capstone2.csprojResolveAssemblyReference.cache

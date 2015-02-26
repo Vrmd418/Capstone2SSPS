@@ -22,7 +22,7 @@
         .HeaderStyle th{text-align:left; border-style:none; border-color:white;}
     </style>--%>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
-
+    <link href="css/responsive-calendar.css" rel="stylesheet"/>
     
     <link type="text/css" rel="stylesheet" href="css/1.css" /><%--http://www.temple.edu/sites/temple/files/css/css_pbm0lsQQJ7A7WCCIMgxLho6mI_kBNgznNUWmTWcnfoE.css" media="all">--%>
     <link type="text/css" rel="stylesheet" href="css/2.css" /><%--http://www.temple.edu/sites/temple/files/css/css_CR2SCSlcchF_V1JZKALtD7MrcD2v0JPHdUDwNYGkQWk.css" media="all">--%>
@@ -157,7 +157,7 @@
               <li><a href="UploadMasterList.aspx">Upload Master List</a></li>
               <li><a href="SendEmail.aspx">Send Email</a></li>
               <li><a href="NewAdminOrCommite.aspx">Add User</a></li>
-            
+              <li><a href="CreateTerm.aspx">Open New Term</a></li>
 </ul></li></ul></div>
         </div>           
         </asp:Panel>
