@@ -28,14 +28,14 @@ namespace Capstone2
         {
             DataSet myDS = UtilityFunctions.getDataSetFromExcel(fuMasterListUpload, Server);
             StoredProcedures mySP = new StoredProcedures();
+            DataTable freshmanTable = myDS.Tables[0];
+            DataTable sophomoreTable = myDS.Tables[1];
 
-            object[] columnNames = myDS.Tables[0].Rows[0].ItemArray;
-
-            foreach (DataTable dt in myDS.Tables)
+            if (rdoStudentType.SelectedValue == "Freshman")
             {
-                foreach (DataRow dr in dt.Rows)
+                foreach (DataRow dr in freshmanTable.Rows)
                 {
-                    if (dt.Rows.IndexOf(dr)>=0)
+                    if (freshmanTable.Rows.IndexOf(dr) >= 0)
                     {
                         SSPSStudent student = new SSPSStudent();
                         student.StudentID = dr["TUID"].ToString();

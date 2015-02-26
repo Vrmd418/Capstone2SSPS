@@ -293,17 +293,17 @@ namespace Capstone2
             inputParameter5.Size = 50;
             objCommand.Parameters.Add(inputParameter5);
 
-            SqlParameter inputParameter6 = new SqlParameter("@totalRankings", myStudent.TotalRankings);
-            inputParameter6.Direction = ParameterDirection.Input;
-            inputParameter6.SqlDbType = SqlDbType.VarChar;
-            inputParameter6.Size = 50;
-            objCommand.Parameters.Add(inputParameter5);
+            //SqlParameter inputParameter6 = new SqlParameter("@totalRankings", myStudent.TotalRankings);
+            //inputParameter6.Direction = ParameterDirection.Input;
+            //inputParameter6.SqlDbType = SqlDbType.VarChar;
+            //inputParameter6.Size = 50;
+            //objCommand.Parameters.Add(inputParameter5);
 
             SqlParameter inputParameter7 = new SqlParameter("@birthdate", myStudent.BirthDate);
             inputParameter7.Direction = ParameterDirection.Input;
             inputParameter7.SqlDbType = SqlDbType.VarChar;
             inputParameter7.Size = 50;
-            objCommand.Parameters.Add(inputParameter5);
+            objCommand.Parameters.Add(inputParameter7);
 
 
             SqlParameter inputParameter8 = new SqlParameter("@scholarshipType", myStudent.ScholarshipType);
