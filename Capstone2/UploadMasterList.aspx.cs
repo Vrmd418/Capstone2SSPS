@@ -50,6 +50,36 @@ namespace Capstone2
                         student.DegreeType = dr["Degree"].ToString();
                         student.NameOfHighSchool = dr["HS Name"].ToString();
                         student.StudentYearStatus = rdoStudentType.SelectedValue.ToString();
+
+                        //if(academic year exists)
+                        student.TermID = AcademicYearList.SelectedValue.ToString();
+
+                        mySP.InsertStudent(student);
+
+                    }
+                }
+            }
+
+            if (rdoStudentType.SelectedValue == "Sophomore")
+            {
+                foreach (DataRow dr in sophomoreTable.Rows)
+                {
+                    if (sophomoreTable.Rows.IndexOf(dr) >= 0)
+                    {
+                        SSPSStudent student = new SSPSStudent();
+                        student.StudentID = dr["TUID"].ToString();
+                        student.FirstName = dr["First Name"].ToString();
+                        student.LastName = dr["Last Name"].ToString();
+                        student.Major = dr["Major "].ToString();
+                        student.Gender = dr["Gender Desc."].ToString();
+                        student.Ethnicity = dr["Ethnicity / Intl / Race"].ToString();
+                        student.BirthDate = dr["Birth Date"].ToString();
+                        student.ScholarshipType = dr["Scholarship Type"].ToString();
+                        student.AdmitTerm = dr["Admit Term"].ToString();
+                        student.DegreeType = dr["Degree"].ToString();
+                        student.StudentYearStatus = rdoStudentType.SelectedValue.ToString();
+
+                        //if(academic year exists)
                         student.TermID = AcademicYearList.SelectedValue.ToString();
 
                         mySP.InsertStudent(student);
