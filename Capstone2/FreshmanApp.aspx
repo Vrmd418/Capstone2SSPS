@@ -147,13 +147,14 @@
                     </div>
                     
                     <div class="col-lg-4 col-md-6">
-                    <asp:Button OnClientClick="SaveButton()" ID="SaveButton" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 10px; width: 100%; background-color:#9E1B34" runat="server" Text="Save" OnClick="SaveButton_Click"/>
-                        <script>
+                    <asp:Button ID="SaveButton" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 10px; width: 100%; background-color:#9E1B34" runat="server" Text="Save" OnClick="SaveButton_Click"/>
+                        <%--<script>
                             function SaveButton() {
                                 alert("Application saved successfully!");
                             }
-                        </script>
+                        </script>--%>
                     <asp:Button ID="SubmitButton" class="btn btn-primary" style="margin-bottom: 10px; width: 100%; background-color:#9E1B34" runat="server" Text="Submit" OnClick="SubmitButton_Click"/>
+                    <asp:Button ID="PDFButton" class="btn btn-primary" style="margin-bottom: 10px; width: 100%; background-color:#9E1B34" runat="server" Text="Export To PDF" OnClick="ToPDF_Click"/>
             </div>
          </div>
        </div>

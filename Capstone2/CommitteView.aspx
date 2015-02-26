@@ -105,7 +105,7 @@
                             </asp:TemplateField>
                                 <asp:TemplateField >
                                 <ItemTemplate>
-                                    <asp:Button ID="ViewApplicationButton" CssClass="btn btn-primary btn-xs" BackColor="#9E1B34" Style="width: 100%" runat="server" Text="Open" />
+                                    <asp:Button ID="ViewApplicationButton" CssClass="btn btn-primary btn-xs" BackColor="#9E1B34" Style="width: 100%" runat="server" Text="Open" OnClick="ShowPDF" />
                                 </ItemTemplate>
                                 <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
 
