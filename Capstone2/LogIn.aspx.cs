@@ -54,13 +54,13 @@ namespace Capstone2
                         {
                             Server.Transfer("AdminPage.aspx", true);
                         }
-                        else if (category == "Freshman" || category == "Sophmore")
+                        else if (category == "Freshman" || category == "Sophomore")
                         {
                             Server.Transfer("StudentHome.aspx", true);
                         }
                         else
                         {
-                            Server.Transfer("CommitteeView.aspx", true);
+                            Server.Transfer("CommitteView.aspx", true);
 
                         }
 
