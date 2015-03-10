@@ -46,8 +46,8 @@ namespace Capstone2
 
                         UserObject obj = new UserObject();
                         DataSet ds = sp.GetCategory(UserIdTextBox.Text);
-                        String category = ds.Tables[0].Rows[0][0].ToString();
-                        String name = String.Concat(ds.Tables[0].Rows[0][1].ToString(), " ", ds.Tables[0].Rows[0][2].ToString());
+                        String category = ds.Tables[0].Rows[0][1].ToString();
+                        String name = String.Concat(ds.Tables[0].Rows[0][2].ToString(), " ", ds.Tables[0].Rows[0][3].ToString());
                         obj.Name = name;
                         obj.Category = category;
                         obj.TUID = UserIdTextBox.Text;

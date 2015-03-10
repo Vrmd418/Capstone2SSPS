@@ -8,8 +8,6 @@ namespace Capstone2
     public class UserObject
     {
         public String TUID { get; set; }
-        public String FName { get; set; }
-        public String LName { get; set; }
         public String Name { get; set; }
         public String Category { get; set; }
     

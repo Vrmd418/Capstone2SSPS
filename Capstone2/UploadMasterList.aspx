@@ -38,7 +38,7 @@
                     <span>
                     <asp:FileUpload  runat="server" 
                     style="visibility:hidden; width: 1px;" 
-                    id="masterList" name='${multipartFilePath}'  
+                    ID="fuMasterListUpload" name='${multipartFilePath}'  
                     onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> <!-- Chrome security returns 'C:\fakepath\'  -->
                     <input style="border-color:#9E1B34; background-color: white " class="btn btn-sm" type="button" value="Choose File..." onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
                     &nbsp;

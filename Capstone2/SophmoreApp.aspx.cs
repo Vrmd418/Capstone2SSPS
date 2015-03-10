@@ -33,7 +33,7 @@ namespace Capstone2
             ApplicationFunctions appFuncs = new ApplicationFunctions();
 
             //CHANGE WHEN WE GET ID FROM LOGIN
-            DataSet myDS = storedProcs.SelectApplication("App123");
+            DataSet myDS = storedProcs.SelectApplication("1");
 
             Application currApp = appFuncs.RepopulateApplicationObj(myDS);
 

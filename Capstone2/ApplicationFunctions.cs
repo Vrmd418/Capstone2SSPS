@@ -17,13 +17,12 @@ namespace Capstone2
             Application savedApp = new Application();
 
             //CHANGE THIS WHEN WE GET ID FROM LOGIN
-            savedApp.ApplicationID = "App123";
+            savedApp.ApplicationID = "1";
 
             //FIGURE OUT FIRST NAME LAST NAME FOR STUDENT
             //
             //
-            //
-
+           
             savedApp.DateSubmitted = myDS.Tables[0].Rows[0]["DateSubmitted"].ToString();
             savedApp.IsStarted = true;
             savedApp.Completed = Convert.ToBoolean(myDS.Tables[0].Rows[0]["Completed"]);

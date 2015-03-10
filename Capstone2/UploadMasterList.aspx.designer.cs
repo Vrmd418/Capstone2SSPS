@@ -49,13 +49,13 @@ namespace Capstone2 {
         protected global::System.Web.UI.WebControls.RadioButtonList rdoStudentType;
         
         /// <summary>
-        /// masterList control.
+        /// fuMasterListUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload masterList;
+        protected global::System.Web.UI.WebControls.FileUpload fuMasterListUpload;
         
         /// <summary>
         /// UploadButton control.
