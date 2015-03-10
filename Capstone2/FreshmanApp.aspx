@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student.Master" AutoEventWireup="true" CodeBehind="FreshmanApp.aspx.cs" Inherits="Capstone2.WebForm4" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WithNav.Master" AutoEventWireup="true" CodeBehind="FreshmanApp.aspx.cs" Inherits="Capstone2.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -147,13 +147,14 @@
                     </div>
                     
                     <div class="col-lg-4 col-md-6">
-                    <asp:Button OnClientClick="SaveButton()" ID="SaveButton" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 10px; width: 100%; background-color:#9E1B34" runat="server" Text="Save" OnClick="SaveButton_Click"/>
-                        <script>
+                    <asp:Button ID="SaveButton" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 10px; width: 100%; background-color:#9E1B34" runat="server" Text="Save" OnClick="SaveButton_Click"/>
+                        <%--<script>
                             function SaveButton() {
                                 alert("Application saved successfully!");
                             }
-                        </script>
+                        </script>--%>
                     <asp:Button ID="SubmitButton" class="btn btn-primary" style="margin-bottom: 10px; width: 100%; background-color:#9E1B34" runat="server" Text="Submit" OnClick="SubmitButton_Click"/>
+                    <asp:Button ID="PDFButton" class="btn btn-primary" style="margin-bottom: 10px; width: 100%; background-color:#9E1B34" runat="server" Text="Export To PDF" OnClick="ToPDF_Click"/>
             </div>
          </div>
        </div>
@@ -161,4 +162,5 @@
      </div>
 
 </div>
+
 </asp:Content>

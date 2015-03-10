@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student.Master" AutoEventWireup="true" CodeBehind="StudentHome.aspx.cs" Inherits="Capstone2.StudentHome" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WithNav.Master" AutoEventWireup="true" CodeBehind="StudentHome.aspx.cs" Inherits="Capstone2.WebForm12" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -11,7 +11,7 @@
                     <h1 class="page-header">Student Home</h1>
     </div>           
 </div>
-
+    
     <div class="row" style ="position: relative ">
         <div class="col-lg-3 cl-md-6"></div>
         <div class="col-lg-6 cl-md-6">
