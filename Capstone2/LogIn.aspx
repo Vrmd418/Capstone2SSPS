@@ -11,7 +11,7 @@
                 <div class="col-xs-12">
                     
                 </div>
-            <div class="col-xs-12"style="margin-top: 8%">       
+            <div class="col-xs-12"style="margin-top: 3%">       
              <asp:Label ID="MessageLabel" runat="server" Visible="false" style=" display: block; width: 50%; margin-left: auto; font-size:medium; font-weight: bold; color: red; margin-right: auto; min-width: 275px" ></asp:Label>
             <div class="panel panel-default" style="width: 50%; margin-top: 5px; margin-left: auto; margin-right: auto; min-width: 275px">
                

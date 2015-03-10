@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WithNav.Master" AutoEventWireup="true" CodeBehind="CreateTerm.aspx.cs" Inherits="Capstone2.WebForm13" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WithNav.Master" AutoEventWireup="true" CodeBehind="EditDeadlines.aspx.cs" Inherits="Capstone2.WebForm14" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<div class="container-fluid">
+    <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3 cl-md-6"></div>
         <div class="col-lg-6 cl-md-6">
-                    <h1 class="page-header">Open New Term</h1>
+                    <h1 class="page-header">Edit Deadlines</h1>
         </div>           
                 
         
@@ -20,24 +20,11 @@
             
             <div class="panel panel-default" >
                 <div style="font-weight: bold" class="panel-heading">
-                   Term Information
+                   <asp:Label ID="AcademicYearLabel" runat="server" Text="Academic Year" style="left: 3%"></asp:Label>
                 </div>
                 <div class="panel-body" style="color: black">
                     <div class="col-lg-8 cl-md-8">
-                    <asp:Label ID="AcademicYearLabel" runat="server" Text="Academic Year" style="left: 3%"></asp:Label>
-                    <asp:DropDownList class="form-control" ID="AcademicYearList" runat="server" style="width:96%; margin-top:10px; margin-bottom: 10px">
-                    <asp:ListItem Value="2015-2016"></asp:ListItem>
-                    <asp:ListItem Value="2016-2017"></asp:ListItem>
-                    <asp:ListItem Value="2018-2019"></asp:ListItem>
-                    <asp:ListItem Value="2019-2020"></asp:ListItem>
-                    <asp:ListItem Value="2020-2021"></asp:ListItem>
-                    <asp:ListItem Value="2021-2022"></asp:ListItem>
-                    <asp:ListItem Value="2022-2023"></asp:ListItem>
-                    <asp:ListItem Value="2023-2024"></asp:ListItem>
-                    <asp:ListItem Value="2024-2025"></asp:ListItem>
-                    <asp:ListItem Value="2025-2026"></asp:ListItem>
-                  
-                    </asp:DropDownList> </div>
+                     </div>
                     
 
                    
@@ -63,16 +50,16 @@
                         <asp:LinkButton ID="RankDeadlineLinkButton" runat="server" style="display:block; margin-top: 3px; margin-left: 2px" OnClick="RankDeadlineLink_OnClick"><span class="glyphicon glyphicon-calendar " style=" margin-right: 1%; margin-top: 10px; float: left; color: #9E1B34; font-size:155%; margin-top:10px; padding-right: 10px;"></span></asp:LinkButton><asp:TextBox ID="RankDeadlineTextBox" CssClass="form-control" Style="width: 89%; margin-top: 10px; margin-bottom: 10px" runat="server" Enabled="False"></asp:TextBox>
                         
                     </div>
-                       <div class="col-lg-4 col-md-12"> <asp:Button OnClientClick="SubmitButton()" ID="SibmitButton" class="btn btn-sm" OnClick="SubmitButton_OnClick" style="margin-top: 40px; margin-bottom:20px; width: 100%; background-color:#9E1B34; color:white" runat="server" Text="Submit" />
+                       <div class="col-lg-4 col-md-12"> <asp:Button OnClientClick="SubmitButton()" ID="SibmitButton" class="btn btn-sm" OnClick="SubmitButton_OnClick" style="margin-top: 40px; margin-bottom:20px; width: 100%; background-color:#9E1B34; color:white" runat="server" Text="Update" />
                         <script>
-                        function SubmitButton() {
-                            alert("New term was successfully opened");
-                        }
+                            function SubmitButton() {
+                                alert("The deadlines were successfully updated");
+                            }
                         </script>
                        
                        </div>
                               <%--<div class="col-lg-8 cl-md-8">--%>         
-                    <asp:Calendar ID="Calendar1" runat="server" Visible="false" Width="200px" Height="100px" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" NextPrevFormat="FullMonth" Style="background-color: white; position:absolute; left: 35%; top: 40%; border-width: 1px; border-style: solid; border-color: #9E1B34" TitleFormat="Month">
+                    <asp:Calendar ID="Calendar1" runat="server" Visible="false" Width="200px" Height="100px" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" NextPrevFormat="FullMonth" Style="background-color: white; position:absolute; left: 35%; top: 30%; border-width: 1px; border-style: solid; border-color: #9E1B34" TitleFormat="Month">
                         <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" ForeColor="#333333" Height="10pt"></DayHeaderStyle>
 
                         <DayStyle Width="14%"></DayStyle>
@@ -104,9 +91,6 @@
     </div>
 
 <%--</div>--%>
-
-
-
 
 
 

@@ -20,7 +20,7 @@ namespace Capstone2
             {
                 UserObject obj = (UserObject)Session["Login"];
 
-                ((Label)Master.FindControl("UserLabel")).Text = obj.TUID.ToString();
+                ((Label)Master.FindControl("UserLabel")).Text = obj.Name.ToString();
 
                 if (obj.Category.ToString() == "Admin")
                 {

@@ -72,7 +72,7 @@
     
 </head>
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-112 node-type-subpage">
-    <div id="wrapper">
+    <%--<div id="wrapper">--%>
     
         <div class="row">
 
@@ -111,7 +111,7 @@
        
       
     </div><!-- /.navbar-collapse -->--%>
-  <form class="navbar-form navbar-right" method="get" name="templesearch" id="templesearch" role="search" action="https://search.temple.edu/search.php">
+  <%--<form class="navbar-form navbar-right" method="get" name="templesearch" id="templesearch" role="search" action="https://search.temple.edu/search.php">
                   <div class="input-group col-md-12">
                                 <input type="text" id="search" name="searchString" class="search-query form-control" style="border-radius: 0px" />
                                 <span class="input-group-btn">
@@ -121,7 +121,7 @@
                                 </span>
                             </div>
           
-      </form>
+      </form>--%>
         
         </div><!-- /.container-fluid -->
 </div>
@@ -147,7 +147,7 @@
         <form id="form1" runat="server">
     
         
-        <div id="page-wrapper" style="min-height: 525px; margin-left: 0px; margin-bottom: 2%; padding: 0px;">
+        <div id="page-wrapper" style="min-height:65%; position:relative; margin-left: 0px; margin-bottom: 2%; padding: 0px;">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             <div class="row">
                 </div>
@@ -156,7 +156,7 @@
         
     
     </form>
-    <div class="row">
+    <div class="row" style="position: relative">
     
     <footer id="#footer">
   <div class="footer-wrap top" >
@@ -229,7 +229,7 @@
     
     </div>
     
-    </div>
+    <%--</div>--%>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

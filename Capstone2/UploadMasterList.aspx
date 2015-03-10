@@ -28,19 +28,19 @@
                     <asp:ListItem Value="2014-2015"></asp:ListItem>
                     </asp:DropDownList>
                     <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-
-                    <asp:RadioButtonList ID="rdoStudentType" runat="server">
-                        <asp:ListItem Value="Freshman"></asp:ListItem>
-                        <asp:ListItem Value="Sophomore"></asp:ListItem>
-                    </asp:RadioButtonList>
+                    <asp:RadioButtonList ID="rdoStudentType" runat="server" style="margin-left:5px; margin-top: 20px" class="radioButtonList" RepeatDirection="Horizontal">
+                            <asp:ListItem Value="Freshman"></asp:ListItem>
+                            <asp:ListItem Value="Sophomore"></asp:ListItem>
+                        </asp:RadioButtonList> 
+                   
                     
                     <div class="col-lg-4 col-md-6" style="width: 66%">
                     <span>
-                    <input  type="file" 
+                    <asp:FileUpload  runat="server" 
                     style="visibility:hidden; width: 1px;" 
                     id="masterList" name='${multipartFilePath}'  
                     onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> <!-- Chrome security returns 'C:\fakepath\'  -->
-                    <input style="border-color:#9E1B34 " class="btn btn-default" type="button" value="Choose File..." onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
+                    <input style="border-color:#9E1B34; background-color: white " class="btn btn-sm" type="button" value="Choose File..." onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
                     &nbsp;
                     <span  class="badge badge-important" ></span>
                     </span>
@@ -48,8 +48,8 @@
                     
                     <div class="col-lg-4 col-md-6">
 
-                    <asp:FileUpload ID="fuMasterListUpload" runat="server" style="margin-top: 20px;"/>
-                    <asp:Button ID="UploadButton" class="btn btn-primary" style="margin-top: 20px; width: 100%; background-color:#9E1B34" runat="server" Text="Submit" onClick="UploadButton_Click"/>
+                    <%--<asp:FileUpload ID="fuMasterListUpload" runat="server" style="margin-top: 20px;"/>--%>
+                    <asp:Button ID="UploadButton" class="btn btn-sm " style="margin-top: 25px; width: 100%; background-color:#9E1B34; color: white" runat="server" Text="Submit" onClick="UploadButton_Click"/>
                     </div>
                     
                  </div>

@@ -365,7 +365,7 @@ namespace Capstone2
             }
 
         }
-        public String GetCategory(String username)
+        public DataSet GetCategory(String username)
         {
             DBConnect db = new DBConnect();
             SqlCommand objcomm = new SqlCommand();
@@ -376,9 +376,7 @@ namespace Capstone2
 
             DataSet ds = db.GetDataSetUsingCmdObj(objcomm);
 
-            String category = ds.Tables[0].Rows[0][0].ToString();
-
-            return category;
+            return ds;
 
         }
 
@@ -418,6 +416,44 @@ namespace Capstone2
             return category;
 
         }
+
+        public DataSet GetDeadlines()
+        {
+            DBConnect db = new DBConnect();
+            SqlCommand objcomm = new SqlCommand();
+            objcomm.CommandType = CommandType.StoredProcedure;
+            objcomm.CommandText = "GetDeadlines";
+
+            DataSet ds = db.GetDataSetUsingCmdObj(objcomm);
+
+            return ds;
+
+        }
+
+        public void UpdateDeadlines(String yearCode, String appdeadline, String docdeadline, String rankdeadline)
+        {
+            SqlCommand objcomm = new SqlCommand();
+
+            objcomm.CommandType = CommandType.StoredProcedure;
+
+            objcomm.CommandText = "UpdateDeadlines";
+            objcomm.Parameters.Add("@yearCode", yearCode);
+            objcomm.Parameters.Add("@applicationDeadline", appdeadline);
+            objcomm.Parameters.Add("@documentDeadline", docdeadline);
+            objcomm.Parameters.Add("@rankDeadline", rankdeadline);
+
+            SqlParameter outputParameter = new SqlParameter("@result", DbType.Int32);
+            outputParameter.Direction = ParameterDirection.ReturnValue;
+
+            objcomm.Parameters.Add(outputParameter);
+
+            myConnection.DoUpdateUsingCmdObj(objcomm);
+
+
+        }
+
+    
+    
     
     }
 

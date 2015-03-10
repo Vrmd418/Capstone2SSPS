@@ -22,7 +22,7 @@ namespace Capstone2
             {
                 UserObject obj = (UserObject)Session["Login"];
 
-                ((Label)Master.FindControl("UserLabel")).Text = obj.TUID.ToString();
+                ((Label)Master.FindControl("UserLabel")).Text = obj.Name.ToString();
                 ((Panel)Master.FindControl("AdminPanel")).Visible = true;
 
                 if (!IsPostBack)
@@ -93,19 +93,19 @@ namespace Capstone2
 
         protected void ApplicationDeadlineLink_OnClick (object sender, EventArgs e)
         {
-
+            Calendar1.SelectedDates.Clear();
             Calendar1.Visible = true;
             Session["Deadline"] = "Application";
         }
         protected void DocumentDeadlineLink_OnClick(object sender, EventArgs e)
         {
-
+            Calendar1.SelectedDates.Clear();
             Calendar1.Visible = true;
             Session["Deadline"] = "Document";
         }
         protected void RankDeadlineLink_OnClick(object sender, EventArgs e)
         {
-
+            Calendar1.SelectedDates.Clear();
             Calendar1.Visible = true;
             Session["Deadline"] = "Rank";
         }

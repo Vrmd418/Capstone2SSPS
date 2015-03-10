@@ -56,7 +56,7 @@
                     <div class="col-lg-4 col-md-6" style="width: 66%">
                      </div>
                     <div class="col-lg-4 col-md-6">
-                    <asp:Button class="btn btn-default" ID="SearchButton" runat="server" Text="Search" BorderColor="#9E1B34" style="width: 100%; margin-bottom: 10px" BackColor="#9E1B34" ForeColor="White"/>                     
+                    <asp:Button class="btn btn-sm" ID="SearchButton" runat="server" Text="Search" BorderColor="#9E1B34" style="width: 100%; margin-bottom: 10px" BackColor="#9E1B34" ForeColor="White"/>                     
                     </div>
                     </div>
                     
@@ -76,17 +76,17 @@
                             <asp:BoundField DataField="academicYear" HeaderText="Academic Year">
                                 <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
 
-                                <ItemStyle HorizontalAlign="Center" Width="15%"></ItemStyle>
+                                <ItemStyle HorizontalAlign="Center" Width="20%"></ItemStyle>
                             </asp:BoundField>
                             <asp:BoundField DataField="major" HeaderText="Major">
                                 <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
 
-                                <ItemStyle HorizontalAlign="Center" Width="15%"></ItemStyle>
+                                <ItemStyle HorizontalAlign="Center" Width="10%"></ItemStyle>
                             </asp:BoundField>
                             <asp:BoundField DataField="rank" HeaderText="Rank">
                                 <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
 
-                                <ItemStyle HorizontalAlign="Center" Width="15%"></ItemStyle>
+                                <ItemStyle HorizontalAlign="Center" Width="10%"></ItemStyle>
                             </asp:BoundField>
                             <asp:TemplateField HeaderText="View Application">
                                 <ItemTemplate>
@@ -94,7 +94,7 @@
                                 </ItemTemplate>
                                 <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
 
-                                <ItemStyle HorizontalAlign="Center" Width="15%"></ItemStyle>
+                                <ItemStyle HorizontalAlign="Center" Width="20%"></ItemStyle>
                             </asp:TemplateField>
                         </Columns>
                         <HeaderStyle BackColor="#9e1b34" Font-Bold="True" ForeColor="White" />

@@ -20,13 +20,13 @@ namespace Capstone2
             {
                 UserObject obj = (UserObject)Session["Login"];
 
-                ((Label)Master.FindControl("UserLabel")).Text = obj.TUID.ToString();
+                ((Label)Master.FindControl("UserLabel")).Text = obj.Name.ToString();
                 ((Panel)Master.FindControl("AdminPanel")).Visible = true;
             }
         }
         protected void UploadButton_Click(object sender, EventArgs e)
         {
-            DataSet myDS = UtilityFunctions.getDataSetFromExcel(fuMasterListUpload, Server);
+            DataSet myDS = UtilityFunctions.getDataSetFromExcel(masterList, Server);
             StoredProcedures mySP = new StoredProcedures();
 
             object[] columnNames = myDS.Tables[0].Rows[0].ItemArray;

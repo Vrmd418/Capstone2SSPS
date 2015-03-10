@@ -45,7 +45,10 @@ namespace Capstone2
                         MessageLabel.Visible = false;
 
                         UserObject obj = new UserObject();
-                        String category = sp.GetCategory(UserIdTextBox.Text);
+                        DataSet ds = sp.GetCategory(UserIdTextBox.Text);
+                        String category = ds.Tables[0].Rows[0][0].ToString();
+                        String name = String.Concat(ds.Tables[0].Rows[0][1].ToString(), " ", ds.Tables[0].Rows[0][2].ToString());
+                        obj.Name = name;
                         obj.Category = category;
                         obj.TUID = UserIdTextBox.Text;
                         Session["Login"] = obj;
@@ -54,13 +57,13 @@ namespace Capstone2
                         {
                             Server.Transfer("AdminPage.aspx", true);
                         }
-                        else if (category == "Freshman" || category == "Sophmore")
+                        else if (category == "Freshman" || category == "Sophomore")
                         {
                             Server.Transfer("StudentHome.aspx", true);
                         }
                         else
                         {
-                            Server.Transfer("CommitteeView.aspx", true);
+                            Server.Transfer("CommitteView.aspx", true);
 
                         }
 

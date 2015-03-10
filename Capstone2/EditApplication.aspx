@@ -10,7 +10,7 @@
                     <h1 class="page-header">Edit Application</h1>
         </div>           
         </div>
-        </div>
+        
         <div class="col-lg-3 cl-md-6">
             </div>
     
@@ -56,11 +56,11 @@
                     <div class="col-lg-4 col-md-6" style="width: 66%">
                      </div>
                     <div class="col-lg-4 col-md-6">
-                    <asp:Button class="btn btn-default" ID="SubmitButton" runat="server" Text="Submit" style="width: 100%; margin-bottom: 10px; margin-top: 10px" BackColor="#9E1B34" ForeColor="White" BorderColor="#9E1B34" />                     
+                    <asp:Button class="btn btn-sm" ID="SubmitButton" runat="server" Text="Submit" style="width: 100%; margin-bottom: 10px; margin-top: 10px" BackColor="#9E1B34" ForeColor="White" BorderColor="#9E1B34" />                     
                     </div>
                     </div>
                 </div>
             </div>
-
+</div>
 
 </asp:Content>
