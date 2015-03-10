@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="NewAdminOrCommite.aspx.cs" Inherits="Capstone2.WebForm6" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WithNav.Master" AutoEventWireup="true" CodeBehind="NewAdminOrCommite.aspx.cs" Inherits="Capstone2.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -7,7 +7,7 @@
         <div class="row" style ="margin-top: 2%; position: relative ">
         <div class="col-lg-3 cl-md-6"></div>
         <div class="col-lg-6 cl-md-6">
-                    <h1 class="page-header">Add Committe Member or Admin</h1>
+                    <h1  class="page-header">Add Committe Member or Admin</h1>
         </div>           
         </div>
         </div>
@@ -15,7 +15,7 @@
             </div>
     <div class="col-lg-6 col-md-6">
             <div class="panel panel-default" style="min-width: 275px; width: 100%; margin-left: auto; margin-right: auto">
-                <div class="panel-heading">
+                <div style="font-weight: bold" class="panel-heading">
                    Add Admin/Committe Form
                 </div>
                

@@ -38,7 +38,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.0.3\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.5\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,12 +72,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPage.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="CommitteView.aspx" />
+    <Content Include="css\responsive-calendar.css" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\1.css" />
     <Content Include="css\2.css" />
     <Content Include="css\3.css" />
@@ -75,6 +93,8 @@
     <Content Include="js\npm.js" />
     <Content Include="ssp.jpg" />
     <Content Include="StudentHome.aspx" />
+    <Content Include="temple-university-logo.png" />
+    <Content Include="ViewHistorical.aspx" />
     <Content Include="Web.config" />
     <Content Include="LogIn.aspx" />
     <Content Include="Contact.aspx" />
@@ -84,6 +104,8 @@
     <Content Include="NewAdminOrCommite.aspx" />
     <Content Include="UploadMasterList.aspx" />
     <Content Include="SendEmail.aspx" />
+    <Content Include="CreateTerm.aspx" />
+    <Content Include="EditDeadlines.aspx" />
     <Content Include="workingpage.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -94,14 +116,43 @@
     <Compile Include="1.Master.designer.cs">
       <DependentUpon>1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Application.cs" />
     <Compile Include="ApplicationFunctions.cs" />
+    <Compile Include="CommitteView.aspx.cs">
+      <DependentUpon>CommitteView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommitteView.aspx.designer.cs">
+      <DependentUpon>CommitteView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="utils\Connection.cs" />
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NoNav1.Master.cs">
+      <DependentUpon>NoNav1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoNav1.Master.designer.cs">
+      <DependentUpon>NoNav1.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LogIn.aspx.cs">
@@ -147,6 +198,7 @@
     <Compile Include="NewAdminOrCommite.aspx.designer.cs">
       <DependentUpon>NewAdminOrCommite.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SSPSStudent.cs" />
     <Compile Include="StoredProcedures.cs" />
     <Compile Include="Student.Master.cs">
       <DependentUpon>Student.Master</DependentUpon>
@@ -176,7 +228,36 @@
     <Compile Include="SendEmail.aspx.designer.cs">
       <DependentUpon>SendEmail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="utils\Connection.cs" />
+    <Compile Include="UserObject.cs" />
+    <Compile Include="utils\UtilityFunctions.cs" />
+    <Compile Include="ViewHistorical.aspx.cs">
+      <DependentUpon>ViewHistorical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewHistorical.aspx.designer.cs">
+      <DependentUpon>ViewHistorical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTerm.aspx.cs">
+      <DependentUpon>CreateTerm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateTerm.aspx.designer.cs">
+      <DependentUpon>CreateTerm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeadlines.aspx.cs">
+      <DependentUpon>EditDeadlines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDeadlines.aspx.designer.cs">
+      <DependentUpon>EditDeadlines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WithNav.Master.cs">
+      <DependentUpon>WithNav.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WithNav.Master.designer.cs">
+      <DependentUpon>WithNav.Master</DependentUpon>
+    </Compile>
     <Compile Include="workingpage.aspx.cs">
       <DependentUpon>workingpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -194,12 +275,19 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Student.Master" />
     <Content Include="1.Master" />
+    <Content Include="Admin.Master" />
+    <Content Include="packages.config" />
+    <Content Include="NoNav1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="WithNav.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Excel\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

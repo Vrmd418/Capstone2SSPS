@@ -5,10 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace Utilities
 {
     public class DBConnect
     {
+
+
+        
+        
         String SqlConnectString = "server=np-stem.temple.edu;Database=CIS4396S06;User id=usrCIS4396S06;Password=3LL13phT";
         SqlConnection myConnectionSql;
         SqlCommand objCmd;
@@ -19,8 +24,8 @@ namespace Utilities
         {
             myConnectionSql = new SqlConnection(SqlConnectString);
             myConnectionSql.Open();
-        }
 
+        }
 
         public DataSet GetDataSet(String SqlSelect)
         {
@@ -102,26 +107,44 @@ namespace Utilities
             // Returns the number of rows affected by the update.
             // If an Exception occurs, -1 is returned
             // This function is used for passing parameters to a Stored Procedure
+
             try
             {
-                theCommandObject.Connection = myConnectionSql;
-                return theCommandObject.ExecuteNonQuery();
+                using (theCommandObject.Connection = myConnectionSql)
+                {
+                    return theCommandObject.ExecuteNonQuery();
+
+                }
             }
             catch (Exception ex)
             {
                 return -1;
             }
+           
+        
         }
 
         public DataSet GetDataSetUsingCmdObj(SqlCommand theCommand)
         {
             // Used for Stored Procedures (Select only) with Parameters
-            theCommand.Connection = myConnectionSql;
-            SqlDataAdapter myDataAdapter = new SqlDataAdapter(theCommand);
-            DataSet myDataSet = new DataSet();
-            myDataAdapter.Fill(myDataSet);
-            ds = myDataSet;
-            return myDataSet;
+            try
+            {
+                theCommand.Connection = myConnectionSql;
+                SqlDataAdapter myDataAdapter = new SqlDataAdapter(theCommand);
+                DataSet myDataSet = new DataSet();
+                myDataAdapter.Fill(myDataSet);
+                ds = myDataSet;
+                
+            }
+            catch (Exception e)
+            {
+            }
+              finally
+            {
+                myConnectionSql.Close();
+            }  
+             return ds;
+               
         }
 
         public DataRow GetRow(DataSet theDataSet, int theRow)
@@ -158,7 +181,7 @@ namespace Utilities
         {
             // InParam is a DataSet. This function is used to Commit
             // the Dataset to the Data Source when updating a disconnected ds.
-
+            
             SqlDataAdapter myDataAdapter = new SqlDataAdapter();
             myDataAdapter.Update(theDataSet);
         }
@@ -191,7 +214,7 @@ namespace Utilities
             myConnectionSql.Open();
         }
 
-        // The Deconstructor
+         //The Deconstructor
         ~DBConnect()
         {
             // Close any open connections to the database before the objects of this class
@@ -201,4 +224,3 @@ namespace Utilities
 
     }   // end class
 }   // end namespace
-    

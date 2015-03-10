@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="Capstone2.Student" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="Capstone2.ScholarStudent" %>
 
 <!DOCTYPE html>
 
@@ -110,24 +110,24 @@
    
       <div class="row" style="padding-top:30px">
         
-        <div class="col-lg-3 cl-md-6" ></div>
-          <div class="col-lg-2 cl-md-6" >
-          <div ><a href="http://cst.temple.edu/academics/science-scholars"><img style="display:block; margin-left: auto; margin-right: auto" src="ssp.jpg" alt="Smiley face" height="80" width="290"/></a></div>
+        <div class="col-lg-3 col-md-12" ></div>
+          <div class="col-lg-2 col-md-3 col-xs-12"   >
+          <div ><a href="http://cst.temple.edu/academics/science-scholars"><img style="display:block; margin-left: auto; margin-right: auto; width: 70%" src="ssp.jpg" alt="Smiley face" /></a></div>
         
         </div>
             
-            <div class="col-lg-4 cl-md-6" >
+            <%--<div class="col-lg-2 col-md-12" style="width: 2%" ></div>--%><div class="col-lg-4 col-md-6 col-xs-12" >
                   <div>   <ul style="" class="nav nav-pills">
   <li style="Margin-left: 5%; width: 30%; background-color: #9E1B34" role="presentation" class="active"><a style="background-color: #9E1B34" href="StudentHome.aspx">Home</a></li>
   <li style="width: 30%; "role="presentation" class="active"><a style="background-color: #9E1B34" href="Contact.aspx">Contacts</a></li>
   <%--<li style="width: 30%; background-color: #9E1B34"role="presentation" class="active"><a style="background-color: #9E1B34" href="FreshmanApp.aspx">Messages</a></li>--%>
     <li style="width: 30%; color: white; background-color: #9E1B34"role="presentation"  class="dropdown">
-          <a  href="#" style="color: white" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a  href="#" style="color: white" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Application<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="FreshmanApp.aspx">Freshman Application</a></li>
             <li><a href="SophmoreApp.aspx">Sophmore Application</a></li>
             <li><a href="EditApplication.aspx">Edit Application</a></li>
-</ul></li></div>
+</ul></li></ul></div>
         </div>           
                 
         

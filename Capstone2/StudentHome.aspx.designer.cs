@@ -10,6 +10,6 @@
 namespace Capstone2 {
     
     
-    public partial class StudentHome {
+    public partial class WebForm12 {
     }
 }

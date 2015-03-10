@@ -21,7 +21,7 @@
     <style type="text/css">
         .HeaderStyle th{text-align:left; border-style:none; border-color:white;}
     </style>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
 
     
     <link type="text/css" rel="stylesheet" href="css/1.css" /><%--http://www.temple.edu/sites/temple/files/css/css_pbm0lsQQJ7A7WCCIMgxLho6mI_kBNgznNUWmTWcnfoE.css" media="all">--%>
@@ -55,7 +55,7 @@
     //--><!]]>
     </script>
     <script type="text/javascript" src="http://www.temple.edu/sites/temple/files/js/js_LytAa36A2HSlvLS72NVij9bmvFfbdk1z5iwbc1Vt8ZI.js"></script>
-    <script type="text/javascript">
+    <%--<script type="text/javascript">
     <!--//--><![CDATA[//><!--
     jQuery(function () {
         jQuery('#superfish-1').supersubs({ minWidth: 12, maxWidth: 27, extraWidth: 1 }).superfish({
@@ -66,7 +66,7 @@
         }).sftouchscreen().supposition().find('ul').bgIframe({ opacity: false });
     });
     //--><!]]>
-    </script>
+    </script>--%>
     <script type="text/javascript" src="http://www.temple.edu/sites/temple/files/js/js_qPWBgb2H1OeG2ltRhpprPaZ-qJRyerKqDFeqODkgvEI.js"></script>
     <script type="text/javascript" src="http://www.temple.edu/sites/all/modules/tu_global/js/tu_global_assets_base.js"></script>
     <script type="text/javascript">
@@ -92,33 +92,53 @@
   <div id="tu-global-header-inner-wrapper" class="tu-global-header-inner-wrapper">
     <div class="tu-global-header">
       <div class="tu-global-header-first">
-        <!-- TEMPLE UNIVERSITY LOGO -->
+        <aside class="grid-8 region region-user-first" id="region-user-first">
+  <div class="region-inner region-user-first-inner">
+            <a href="http://www.temple.edu/" id="tuLogoDesktop"><img src="/sites/cst/themes/custom/img/temple-university-logo.png" alt="Temple University Logo" title="Temple University Logo"></a>
+  </div>
+</aside><!-- TEMPLE UNIVERSITY LOGO -->
               </div>
       <div class="tu-global-header-second">
-        <div class="tu-global-header-second-inner clearfix">
-          <div class="tu-global-header-second-inner-wrapper clearfix">
-            <!-- UTILITY MENU -->
+        
+          <div class="tu-global-header-second-inner clearfix">
+          
+            <div class="tu-global-header-second-inner-wrapper clearfix">
+            
+                <!-- UTILITY MENU -->
             <nav id="tu-global-utility-menu"><div id="tu-global-utility-menu-button"><a href="#" tabindex="0" role="button" aria-label="Open Utility Menu"></a></div><div class="item-list"><ul class="menu"><%--<li class="tu-global-leaf tu-global-leaf-1 first first"><a href="http://admissions.temple.edu/visit?utm_campaign=TU-Global-Header-Footer&amp;utm_medium=web&amp;utm_source=www-temple-edu-header-link&amp;utm_content=Visit" title="Visit" class="tu-global-visit-link">Visit</a></li>--%>
 <%--<li class="tu-global-leaf tu-global-leaf-2 "><a href="http://temple.edu/admissions?utm_campaign=TU-Global-Header-Footer&amp;utm_medium=web&amp;utm_source=www-temple-edu-header-link&amp;utm_content=Apply" title="Apply" class="tu-global-apply-link">Apply</a></li>
 <li class="tu-global-leaf tu-global-leaf-3 "><a href="http://www.alumni.temple.edu/s/705/alumni/index.aspx?utm_campaign=TU-Global-Header-Footer&amp;utm_medium=web&amp;utm_source=www-temple-edu-header-link&amp;utm_content=Alumni" title="Alumni" class="tu-global-alumni-link">Alumni</a></li>--%>
 <li class="tu-global-leaf tu-global-leaf-4 last last"><a href="https://tuportal4.temple.edu/cp/home/displaylogin?utm_campaign=TU-Global-Header-Footer&amp;utm_medium=web&amp;utm_source=www-temple-edu-header-link&amp;utm_content=TUportal" title="TUportal" class="tu-global-tuportal-link">TUportal</a></li>
 </ul></div></nav>            <!-- GOOGLE SEARCH -->
             <div class="tu-global-search-wrapper">
-              <form action="https://search.temple.edu/search.php" id="templesearch" method="get" name="templesearch"><div class="form-item-search-block-form"><input id="search" name="searchString" size="25" title="Type Text to Search" placeholder="Search Site" type="text" class="inactive"></div><div class="form-actions"><a href="#" tabindex="0" role="button" aria-label="Search Site">Search</a><input type="submit" value="Search" title="Search Site" aria-label="Search Site"></div></form>            </div>
+              <form action="https://search.temple.edu/search.php" id="templesearch" method="get" name="templesearch"><div class="form-item-search-block-form"><input id="search" name="searchString" size="25" title="Type Text to Search" value="search site" type="text" class="inactive"></div><div class="form-actions"><a href="#" tabindex="0" role="button" aria-label="Search Site">Search</a><input type="submit" value="Search" title="Search Site" aria-label="Search Site"></div></form>            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="tu-global-branding">
-    <h1 class="tu-global-site-name tu-global-site-logo" style="margin-bottom: 2%; margin-top: 3%"><a href="http://www.temple.edu" title="Home">Temple University</a></h1><h1 class="tu-global-site-name tu-global-site-logo" style="clear:none; margin-bottom: 2%; margin-top: 3%; float:right; margin-left: auto; margin-right: auto"><img src="ssp.jpg" alt="Smiley face" height="60" width="200"/></h1><%--<h2 class="tu-global-support-button">--%><%--<a href="http://smc.temple.edu/" title="School of Media and Communication" rel="home">School of Media and Communication</a>--%><%--<a href="http://www.giving.temple.edu/s/705/giving/index.aspx?utm_campaign=TU-Global-Header-Footer&amp;utm_medium=web&amp;utm_source=www-temple-edu-header-link&amp;utm_content=Support-Temple" title="Support Temple">Support Temple</a></h2>--%>  
+   
+      <div class="row" style="padding-top:30px">
+        
+        <div class="col-lg-3 cl-md-6" ></div>
+          <div class="col-lg-2 cl-md-6" >
+          <div ><a href="http://cst.temple.edu/academics/science-scholars"><img style="display:block; margin-left: auto; margin-right: auto" src="ssp.jpg" alt="Smiley face" height="80" width="290"/></a></div>
+        
+        </div>
+            
+            <div class="col-lg-4 cl-md-6" >
+                  <%--<div>   <ul style="" class="nav nav-pills">
+  <li style="Margin-left: 5%; width: 30%; background-color: #9E1B34" role="presentation" class="active"><a style="background-color: #9E1B34" href="FreshmanApp.aspx">Home</a></li>
+  <li style="width: 30%; "role="presentation" class="active"><a style="background-color: #9E1B34" href="FreshmanApp.aspx">Profile</a></li>
+  <li style="width: 30%; background-color: #9E1B34"role="presentation" class="active"><a style="background-color: #9E1B34" href="FreshmanApp.aspx">Messages</a></li>
+</ul></div>--%>
+        </div>           
+                
+        
+    </div>  
 
-  </div>
-<%--</div>--%>
-       
-         
-      
+ 
          </header>
         </div>
         
