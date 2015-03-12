@@ -26,7 +26,7 @@ namespace Capstone2
         }
         protected void UploadButton_Click(object sender, EventArgs e)
         {
-            DataSet myDS = UtilityFunctions.getDataSetFromExcel(masterList, Server);
+            DataSet myDS = UtilityFunctions.getDataSetFromExcel(fuMasterListUpload, Server);
             StoredProcedures mySP = new StoredProcedures();
 
             object[] columnNames = myDS.Tables[0].Rows[0].ItemArray;
